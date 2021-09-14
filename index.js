@@ -22,6 +22,8 @@
 // 7. Initialize a local git repository, add the remote link and push to git with the commit message of s27 Activity.
 // 8. Copy and paste the link to boodle named:27 Node.js Routing w/ HTTP Methods
 
+const http = require('http')
+
 let information = [
 	{
 		'firstName': 'Mary Jane',
@@ -67,8 +69,8 @@ http.createServer(function(req,res){
 				"password": requestBody.password
 			}
 
-			directory.push(newUser)
-			console.log(directory)
+			information.push(newUser)
+			console.log(information)
 
 			res.writeHead(200, {'Content-Type': 'application/json'});
 			res.write(JSON.stringify(newUser));
